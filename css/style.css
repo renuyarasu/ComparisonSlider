@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap");
+
+/* reset css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  border: none;
+}
+
+.comparison-slider {
+  position: relative;
+  width: 100%;
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.pic {
+  position: absolute;
+  width: 100vw;
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.pic__content-wrap {
+  position: absolute;
+  width: 100vw;
+  min-height: 55vw;
+}
+
+.pic__content {
+  position: absolute;
+  width: 25%;
+  top: 20%;
+  left: 7%;
+  padding: 2.5%;
+  text-align: center;
+  z-index: 41;
+}
+.pic--before .pic__content {
+  background-color: rgba(34, 34, 34, 0.75);
+  color: #fff;
+}
+.pic--after .pic__content {
+  background-color: rgba(240, 248, 255, 0.9);
+  color: #222;
+}
+.pic img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.comparison-slider {
+  font-family: "Crimson Text", serif;
+  font-size: 12px;
+}
+.pic--before h3 {
+  color: #fff;
+  text-transform: uppercase;
+}
+.pic--after h3 {
+  color: #214569;
+  text-transform: uppercase;
+}
+
+.comparison-slider p {
+  font-family: "Crimson Text", serif;
+  font-size: 8px;
+}
+
+.pic--before {
+  z-index: 1;
+}
+
+.handle {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  height: 120%;
+  width: 2px;
+  background-color: #214569;
+  transform: rotate(15deg) translateY(-50%);
+  transform-origin: top;
+  z-index: 3;
+}
+
+.pic--after {
+  transform: skew(-15deg);
+  margin-left: -2000px;
+  width: calc(50vw + 2000px);
+  z-index: 2;
+}
+
+.pic--after .pic__content-wrap {
+  transform: skew(15deg);
+  margin-left: 2000px;
+}
+
+@media /* medium */ (min-width: 451px) {
+  .comparison-slider h3 {
+    font-size: 16px;
+  }
+  .comparison-slider p {
+    font-size: 10px;
+  }
+}
+
+@media /* large */ (min-width: 769px) {
+  .comparison-slider h3 {
+    font-size: 20px;
+  }
+  .comparison-slider p {
+    font-size: 34px;
+  }
+  .handle {
+    width: 3.5px;
+  }
+}
+
+@media /* extra-large */ (min-width: 1025px) {
+  .comparison-slider h3 {
+    font-size: 50px;
+  }
+  .comparison-slider p {
+    font-size: 34px;
+  }
+  .handle {
+    width: 5px;
+  }
+}
